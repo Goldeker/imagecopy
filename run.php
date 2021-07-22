@@ -32,5 +32,6 @@ imagecopy($imagebox, $desImage, 20, 0, 0, 0, imagesx($desImage), imagesy($desIma
 
 $filename = './images/'.uniqid().'.jpg';
 imagejpeg($imagebox,$filename);
+imagedestroy($imagebox);
 
-exit('success..');
+exit($filename);
